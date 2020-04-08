@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title 详情
+    link(rel='stylesheet' href='style.css')
+  body
+    div.container
+      h1 用户详情
+      div#errMsgFromServer!= err
+      div#userInfo
+        p#username 用户名：
+          span.attrib= username
+        p#sid 学号：
+          span.attrib= sid
+        p#phone 电话：
+          span.attrib= phone
+        p#email 邮箱：
+          span.attrib= email
+      button#reset(onclick="location.href='logout'") 退出

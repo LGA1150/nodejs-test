@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title 登录
+    link(rel='stylesheet' href='style.css')
+    script(type='text/javascript' src='jquery.js')
+  body
+    div.container
+      h1 用户登录
+      br
+      form(method='post')
+        div#userInfo
+          p#username.group
+            input(name='username' maxlength='18' pattern='^[a-zA-Z][a-zA-Z0-9_]{5,17}' title='6~18位英文字母、数字或下划线，必须以英文字母开头' required)
+            span.highlight
+            span.bar
+            label 用户名
+          p#password.group
+            input(name='password' type='password' maxlength='12' pattern='^[a-zA-Z0-9_\-]{6,12}' title='6~12位英文字母、数字、中划线或下划线' required)
+            span.highlight
+            span.bar
+            label 密码
+        div#buttons
+          button#reset(type='button' onclick="location.href='regist'") 注册
+          button#submit(type='submit') 登录

@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title 注册
+    link(rel='stylesheet' href='style.css')
+    script(type='text/javascript' src='jquery.js')
+    script(type='text/javascript' src='signin.js')
+  body
+    div.container
+      h1 用户注册
+      br
+      form(method='post')
+        div#userInfo
+          p#username.group
+            input(name='username' maxlength='18' pattern='^[a-zA-Z][a-zA-Z0-9_]{5,17}' title='6~18位英文字母、数字或下划线，必须以英文字母开头' required)
+            span.highlight
+            span.bar
+            label 用户名
+          p#password.group
+            input(name='password' type='password' maxlength='12' pattern='^[a-zA-Z0-9_\-]{6,12}' title='6~12位英文字母、数字、中划线或下划线' required)
+            span.highlight
+            span.bar
+            label 密码
+          p#confirm.group
+            input(type='password' maxlength='12' pattern='^[a-zA-Z0-9_\-]{6,12}' title='需与原密码一致' required)
+            span.highlight
+            span.bar
+            label 重复密码
+          p#sid.group
+            input(name='sid' maxlength='8' pattern='^[1-9]\\d{7}' title='8位数字，不能以0开头' required)
+            span.highlight
+            span.bar
+            label 学号
+          p#phone.group
+            input(name='phone' maxlength='11' pattern='^[1-9]\\d{10}' title='11位数字，不能以0开头' required)
+            span.highlight
+            span.bar
+            label 电话
+          p#email.group
+            input(name='email' type='email' title='请输入有效邮箱' required)
+            span.highlight
+            span.bar
+            label 邮箱
+        div#buttons
+          button#reset(type='reset') 重置
+          button#submit(type='submit') 提交
